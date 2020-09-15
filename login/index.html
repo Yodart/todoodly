@@ -2,63 +2,91 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Todoodle</title>
+    <title>Todoodle | Login</title>
     <meta name="author" content="Yodart" />
     <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> You should check in on some of those
-      fields below.
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div id="main-container">
-      <div id="inputs">
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+    <div class="container" id="content">
+      <div id="main-container" class="container">
+        <div class="row">
+          <div id="inputs">
+            <div class="row">
+              <label>Todoodle Login</label>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm"
+                    >Name</span
+                  >
+                </div>
+                <input
+                  type="text"
+                  id="name-input"
+                  class="form-control"
+                  onchange="onInputChange()"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm"
+                    >Password</span
+                  >
+                </div>
+                <input
+                  type="password"
+                  id="password-input"
+                  onchange="onInputChange()"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm"
+                />
+              </div>
+            </div>
           </div>
-          <input
-            type="text"
-            id="name-input"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-sm"
-          />
         </div>
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm"
-              >Password</span
+
+        <div class="container" id="login-button">
+          <div class="row">
+            <button
+              onclick="login()"
+              type="button"
+              class="btn btn-outline-primary btn-sm btn-block"
             >
+              Log In
+            </button>
           </div>
-          <input
-            type="text"
-            id="password-input"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-sm"
-          />
         </div>
       </div>
-      <button
-        onclick="login()"
-        type="button"
-        id="login"
-        class="btn btn-outline-primary btn-sm btn-block"
-      >
-        Log In
-      </button>
-      <!-- <div id="login-button">Log in</div> -->
+      <div class="container" id="message-alert">
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-success" role="alert" id="success-alert">
+              Logged in Successfully
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="message-alert">
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-danger" role="alert" id="failed-alert">
+              Wrong User or Password
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <script
@@ -71,17 +99,5 @@
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
     crossorigin="anonymous"
   ></script>
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-    crossorigin="anonymous"
-  />
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"
-  ></script>
-
   <script src="script.js"></script>
 </html>
