@@ -1,0 +1,42 @@
+#main-container {
+  background-color: white;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  border-style: solid;
+  margin-top: 30vh;
+  width: 90vw;
+  max-width: 400px;
+  padding: 25px 25px 25px 25px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #c7ced5;
+}
+#inputs {
+  margin: auto;
+  width: 325px;
+  margin-left: 25px;
+}
+
+#login-button {
+  margin-top: 5px;
+}
+
+#message-alert {
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+#success-alert {
+  display: none;
+}
+
+#failed-alert {
+  display: none;
+}
